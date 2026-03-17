@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nicholas John | Professional Webpage</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background-color:#f4f6f9;
+color:#333;
+padding:20px;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+align-items:center;
+width:100%;
+background-color:#0b3d91;
+color:white;
+padding:25px;
+box-sizing:border-box;
+}
+
+.header img{
+width:250px;
+border-radius:10px;
+margin-right:30px;
+height:auto;
+}
+
+.header-text h1{
+margin:0;
+font-size:34px;
+}
+
+.header-text p{
+margin:6px 0;
+}
+
+.header-text a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* MAIN FLEXBOX LAYOUT */
+
+.container{
+display:flex;
+width:100%;
+margin-top:20px;
+}
+
+/* NAVIGATION MENU */
+
+.nav{
+width:220px;
+background-color:#e3e7ef;
+padding:25px;
+box-sizing:border-box;
+}
+
+.nav a{
+display:block;
+margin-bottom:18px;
+text-decoration:none;
+color:#0b3d91;
+font-weight:bold;
+cursor:pointer;
+}
+
+.nav a:hover{
+text-decoration:underline;
+}
+
+/* MAIN CONTENT */
+
+.content{
+flex:1;
+background:white;
+padding:30px;
+margin-left:20px;
+border-radius:6px;
+box-sizing:border-box;
+}
+
+/* SECTIONS */
+
+.section{
+display:none;
+}
+
+.section.active{
+display:block;
+}
+
+h2{
+color:#0b3d91;
+}
+
+</style>
+
+<script>
+
+function showSection(sectionId){
+
+let sections=document.querySelectorAll(".section");
+
+sections.forEach(function(section){
+section.classList.remove("active");
+});
+
+document.getElementById(sectionId).classList.add("active");
+
+}
+
+window.onload=function(){
+showSection("about");
+}
+
+</script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="header">
+
+<img src="Professional Photo.jpg" alt="Professional Photo">
+
+<div class="header-text">
+
+<h1>Nicholas John</h1>
+
+<p>Finance & Accountancy Student</p>
+
+<p>
+<a href="https://illinois.edu/" target="_blank">
+University of Illinois Urbana-Champaign
+</a>
+|
+<a href="https://giesbusiness.illinois.edu/" target="_blank">
+Gies College of Business
+</a>
+</p>
+
+<p>Email: 
+<a href="mailto:njohn56@illinois.edu">
+njohn56@illinois.edu
+</a>
+</p>
+
+<p>
+<a href="https://www.linkedin.com/in/nicholas-john1/" target="_blank">
+LinkedIn Profile
+</a>
+</p>
+
+</div>
+
+</div>
+
+<!-- FLEXBOX PAGE LAYOUT -->
+
+<div class="container">
+
+<!-- NAVIGATION -->
+
+<div class="nav">
+
+<a onclick="showSection('about')">About Me</a>
+
+<a onclick="showSection('education')">Education</a>
+
+<a onclick="showSection('skills')">Skills</a>
+
+<a onclick="showSection('experience')">Experience or Activities</a>
+
+</div>
+
+<!-- CONTENT AREA -->
+
+<div class="content">
+
+<!-- ABOUT -->
+
+<div id="about" class="section">
+
+<h2>About Me</h2>
+
+<p>
+I am a Finance and Accountancy student at the University of Illinois
+Urbana-Champaign’s Gies College of Business. I am interested in building
+strong analytical and financial decision-making skills that can be applied
+to corporate finance, investment analysis, and financial consulting.
+
+Through my coursework and leadership experiences, I am developing
+technical abilities in financial modeling, discounted cash flow analysis,
+and data analysis using tools such as Microsoft Excel and Tableau.
+I enjoy working with financial data and solving complex business
+problems to support informed strategic decisions.
+
+In the future, I hope to pursue opportunities in finance, consulting,
+or financial advisory where I can continue strengthening my analytical
+skills and contribute to meaningful business outcomes.
+</p>
+
+</div>
+
+<!-- EDUCATION -->
+
+<div id="education" class="section">
+
+<h2>Education</h2>
+
+<p><strong>University of Illinois Urbana-Champaign</strong></p>
+
+<p>Bachelor of Science</p>
+
+<p>Major: Finance & Accountancy</p>
+
+<p>Expected Graduation: 2028</p>
+
+</div>
+
+<!-- SKILLS -->
+
+<div id="skills" class="section">
+
+<h2>Skills</h2>
+
+<ul>
+
+<li>Financial Modeling</li>
+
+<li>Discounted Cash Flow Analysis</li>
+
+<li>Time Management</li>
+
+</ul>
+
+</div>
+
+<!-- EXPERIENCE -->
+
+<div id="experience" class="section">
+
+<h2>Experience or Activities</h2>
+
+<p><strong>Instructional Associate — BADM210</strong></p>
+
+<p>
+Teaching a class of 20 students how to effectively use data analysis tools
+such as Microsoft Excel and Tableau.
+</p>
+
+<p><strong>Section Leader — BUS101</strong></p>
+
+<p>
+Led a class of 30 students on topics related to business ethics
+and professional responsibility.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
